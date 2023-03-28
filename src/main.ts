@@ -45,7 +45,8 @@ async function get_release_by_tag(
         tag_name: tag,
         prerelease: prerelease,
         name: release_name,
-        body: body
+        body: body,
+        draft: false
       })
     } else {
       throw error

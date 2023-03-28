@@ -1,5 +1,8 @@
 # Changelog
 
+## [2.5.1] - 2023-03-28
+- Explicitly set draft to false
+
 ## [2.5.0] - 2023-02-21
 - Add retry to upload release [#96](https://github.com/svenstaro/upload-release-action/pull/96) (thanks @sonphantrung)
 

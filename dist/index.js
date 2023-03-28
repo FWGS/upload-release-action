@@ -60,7 +60,7 @@ function get_release_by_tag(tag, prerelease, release_name, body, octokit) {
             // If this returns 404, we need to create the release first.
             if (error.status === 404) {
                 core.debug(`Release for tag ${tag} doesn't exist yet so we'll create it now.`);
-                return yield octokit.request(createRelease, Object.assign(Object.assign({}, repo()), { tag_name: tag, prerelease: prerelease, name: release_name, body: body }));
+                return yield octokit.request(createRelease, Object.assign(Object.assign({}, repo()), { tag_name: tag, prerelease: prerelease, name: release_name, body: body, draft: false }));
             }
             else {
                 throw error;
